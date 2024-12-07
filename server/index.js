@@ -18,7 +18,7 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/codecollab')
+mongoose.connect('mongodb+srv://kulkarniswapnil0000:Zzksbcfmrt9Qx0cW@codecollab.399pn.mongodb.net/?retryWrites=true&w=majority&appName=CodeCollab')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
