@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fira: 'Fira Code', monospace;
+  --font-space: 'Space Grotesk', sans-serif;
+}
+
+body {
+  @apply bg-gray-900 text-gray-100 font-space;
+}
+
+.font-fira {
+  font-family: var(--font-fira);
+}
+
+.font-space {
+  font-family: var(--font-space);
+}
