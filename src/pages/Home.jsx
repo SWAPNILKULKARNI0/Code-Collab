@@ -20,7 +20,7 @@ function Home() {
 
   const fetchRooms = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/rooms', {
+      const res = await fetch('https://code-collab-eq8z.onrender.com/api/rooms', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },
@@ -36,7 +36,7 @@ function Home() {
   const createRoom = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/rooms', {
+      const res = await fetch('https://code-collab-eq8z.onrender.com/api/rooms', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ function Home() {
     if (!window.confirm('Are you sure you want to delete this room?')) return;
     
     try {
-      const res = await fetch(`http://localhost:5000/api/rooms/${roomId}`, {
+      const res = await fetch(`https://code-collab-eq8z.onrender.com/api/rooms/${roomId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -78,7 +78,7 @@ function Home() {
   const joinRoom = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:5000/api/rooms/${inviteCode}`, {
+      const res = await fetch(`https://code-collab-eq8z.onrender.com/api/rooms/${inviteCode}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },

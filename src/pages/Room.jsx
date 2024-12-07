@@ -17,7 +17,7 @@ function Room() {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://code-collab-eq8z.onrender.com');
     setSocket(newSocket);
 
     return () => newSocket.disconnect();
@@ -26,7 +26,7 @@ function Room() {
   useEffect(() => {
     const fetchRoom = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/rooms/${roomId}`, {
+        const res = await fetch(`https://code-collab-eq8z.onrender.com/api/rooms/${roomId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },
